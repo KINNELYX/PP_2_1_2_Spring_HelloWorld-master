@@ -8,11 +8,14 @@ public class App {
         HelloWorld bean = (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage() + "\n");
         HelloWorld bean2 = (HelloWorld) applicationContext.getBean("helloworld");
-        System.out.println("Сравнение пары бинов HelloWorld\nРезультат: " + bean.equals(bean2) + "\n");
+        System.out.println("Сравнение пары бинов HelloWorld\nРезультат: " + (bean == bean2) + "\n");
+
 
         Cat cat = (Cat) applicationContext.getBean("cat");
         System.out.println(cat.getMessage() + "\n");
         Cat cat2 = (Cat) applicationContext.getBean("cat");
-        System.out.println("Сравнение пары бинов Cat\nРезультат: " + cat.equals(cat2) + "\n");
+        System.out.println("Сравнение пары бинов Cat\nРезультат: " + (cat == cat2) + "\n");
+
+
     }
 }
